@@ -1,0 +1,18 @@
+TECNO LAB usa estos componentes de terceros (incluidos en lib/):
+
+- three.js r170 · MIT · https://threejs.org  (ver three.js-MIT.txt)
+- js-aruco2 2.0.0 · MIT · https://github.com/damianofalcioni/js-aruco2  (ver js-aruco2-MIT.txt)
+- MediaPipe Hands 0.4 (@mediapipe/hands) · Apache License 2.0 · https://github.com/google-ai-edge/mediapipe
+  Texto de la licencia: https://www.apache.org/licenses/LICENSE-2.0
+- Draco 3D decoder (lib/draco) · Apache License 2.0 · https://github.com/google/draco
+- Iconos Lucide · ISC · https://lucide.dev  (ver lucide-ISC.txt)
+- Fuentes Sora y Lexend · SIL Open Font License 1.1  (ver fuente-*-OFL.txt)
+
+- Draco 3D (decodificador, Google) · Apache License 2.0 · https://github.com/google/draco
+- meshoptimizer (decodificador incluido en three.js) · MIT · https://github.com/zeux/meshoptimizer
+- glTF-Transform (herramienta usada para optimizar los modelos) · MIT · https://gltf-transform.dev
+- Lucide (iconos) · ISC · https://lucide.dev  (ver lucide-ISC.txt)
+- Fuentes Sora y Lexend · SIL Open Font License 1.1 (ver fuente-*.txt)
+
+Modelos 3D: ver CREDITOS-MODELOS-3D.txt (Sketchfab, licencias Creative Commons).
+Videos: se reproducen desde YouTube y pertenecen a sus canales (ver la sección Créditos de la app).

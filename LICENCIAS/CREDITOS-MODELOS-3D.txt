@@ -1,0 +1,164 @@
+Créditos de los modelos 3D de TECNO LAB
+========================================
+
+Todos los modelos se descargaron de Sketchfab (https://sketchfab.com) y pertenecen a sus autores.
+Se usan con fines educativos y sin ánimo de lucro, según la licencia de cada uno.
+Cambios realizados: optimización para la web (reducción de polígonos, texturas WebP de 1024 px
+y compresión meshopt). En dos modelos se convirtieron los materiales al formato metal/rugosidad
+y en la fuente de poder se quitó una pieza suelta. Los modelos más pesados se simplificaron un poco más (sin cambiar
+su forma) para que la app abra rápido; la UPS tenía casi 5 millones de triángulos y se
+recalcularon sus normales. No se cambió la forma de ningún modelo.
+Los modelos con licencia CC BY-SA o CC BY-NC-SA se comparten bajo esa misma licencia.
+
+monitor.glb
+  Título: Monitor | Computer | Realistic Computer Monitor
+  Autor: Model Wala (https://sketchfab.com/modelwala)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/monitor-computer-realistic-computer-monitor-384ff6cf0bb947af9690529008f843a4
+
+teclado.glb
+  Título: Teclado - Andres Mendez - (EST USB IM)
+  Autor: rafaelblanco00 (https://sketchfab.com/rafaelblanco00)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/teclado-andres-mendez-est-usb-im-a9e5f1305024484a845b0978ff51c055
+
+mouse.glb
+  Título: computer mouse
+  Autor: mfk (https://sketchfab.com/mfkffzl)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/computer-mouse-f502604d3d9547088e9a56a3a32661ae
+
+cpu.glb
+  Título: Mengenal CPU
+  Autor: erwan99 (https://sketchfab.com/erwan99)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/mengenal-cpu-a872fc9e704248969064fe79dbf82917
+
+microfono.glb
+  Título: Microphone Blue Yeti
+  Autor: AlbertVictory (https://sketchfab.com/albert_victory)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/microphone-blue-yeti-8d34f19a184747a0b4af76f7ea0ed572
+
+camara.glb
+  Título: Logitech Webcam
+  Autor: yimni (https://sketchfab.com/yimni)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/logitech-webcam-ef31d877ff6e4aa4af565cddadf7a4c8
+
+impresora.glb
+  Título: Epson printer model
+  Autor: zafry (https://sketchfab.com/zafry)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/epson-printer-model-752da10ef09a4f4782aa6c38a82f4b26
+
+pantalla_tactil.glb
+  Título: Microsoft Surface Pro 3 + Touch Cover
+  Autor: MD.Jobair Hossain (https://sketchfab.com/samrat33k)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/microsoft-surface-pro-3-touch-cover-24052379ad2a4a57bd313aef83305dcf
+
+usb.glb
+  Título: USB Flash Drive
+  Autor: Artik (https://sketchfab.com/artikdev)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/usb-flash-drive-b7cfb7e2809e4c64afb713140c982489
+
+proyector.glb
+  Título: Video projector
+  Autor: 1-3D.com (https://sketchfab.com/1-3D.com)
+  Licencia: CC BY-SA 4.0 http://creativecommons.org/licenses/by-sa/4.0/
+  Fuente: https://sketchfab.com/3d-models/video-projector-e14a2b9336df47a6b536a3a1cf829221
+
+router.glb
+  Título: Router
+  Autor: DailyArt (https://sketchfab.com/D.art)
+  Licencia: CC BY-NC 4.0 http://creativecommons.org/licenses/by-nc/4.0/
+  Fuente: https://sketchfab.com/3d-models/router-93c561886acc48bab5a34d02f0a463e5
+
+control.glb
+  Título: Xbox Inalambric Controller (Black)
+  Autor: oscar.lopez.riviello (https://sketchfab.com/oscar.lopez.riviello)
+  Licencia: Consultar en Sketchfab 
+  Fuente: https://sketchfab.com/oscar.lopez.riviello
+
+tarjeta_madre.glb
+  Título: MotherBoard + Components
+  Autor: Daniel Cardona (https://sketchfab.com/DanielCardonaArt)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/motherboard-components-3bc94057328243d4b341a55f59160f8a
+
+disco_duro.glb
+  Título: HDD
+  Autor: Nadya Sarieva (https://sketchfab.com/nsarieva13)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/hdd-66abd679b8934298ba8af35db56d8106
+
+ssd.glb
+  Título: SSD Drive
+  Autor: Reitax (https://sketchfab.com/reitaxac)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/ssd-drive-acc6b4073d7640508ea03ccbaf199c13
+
+fuente.glb
+  Título: PSU Power Supply Unit
+  Autor: dhafintaufiqi21 (https://sketchfab.com/dhafintaufiqi21)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/psu-power-supply-unit-69ccd1be3a77497cb2acc9e39e7c52b3
+
+tarjeta_grafica.glb
+  Título: Tarjeta de video 2080
+  Autor: WolfRayet (https://sketchfab.com/WolfRayet)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/tarjeta-de-video-2080-82c44e94cb774ddba910bb56fe92f982
+
+ventilador.glb
+  Título: PC Fan Ventilador 140mm
+  Autor: vldmr (https://sketchfab.com/vldmr)
+  Licencia: CC BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
+  Fuente: https://sketchfab.com/3d-models/pc-fan-ventilador-140mm-d98c18f4018a49eaa08067745cad8257
+
+
+
+parlantes.glb
+  Título: OOGOU A52 Speakers Black and White
+  Autor: Vilad (https://sketchfab.com/Vilad)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/oogou-a52-speakers-black-and-white-c09ac57f5a5644adb81d1173dcf101e9
+
+audifonos.glb
+  Título: Audio Technica Headphone
+  Autor: ZxTulz (https://sketchfab.com/zxtulz)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/audio-technica-headphone-d1e3aa0ba0b749d099cd7fef367d8077
+
+parlante_logitech.glb
+  Título: Logitech Speaker
+  Autor: Cem Gürbüz (https://sketchfab.com/cemgurbuzz)
+  Licencia: CC BY-NC 4.0 http://creativecommons.org/licenses/by-nc/4.0/
+  Fuente: https://sketchfab.com/3d-models/logitech-speaker-fd53701e5e8d4586976a5abbc94f6b62
+
+impresora_multifuncional.glb
+  Título: Imprimante
+  Autor: boitaloran (https://sketchfab.com/boitaloran)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/imprimante-74ec9fc76b5a46ddab64aa2342cff769
+
+
+regulador.glb
+  Título: Automatic Voltage Regulator (AVR)
+  Autor: seiippai (https://sketchfab.com/seiippai)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/automatic-voltage-regulator-avr-7c55a5cc83c64035983696ecd315f0fa
+
+ram.glb
+  Título: Random access memory (ram) ddr4
+  Autor: suuugar_mommy (https://sketchfab.com/suuugar_mommy)
+  Licencia: CC BY-NC 4.0 http://creativecommons.org/licenses/by-nc/4.0/
+  Fuente: https://sketchfab.com/3d-models/random-access-memory-ram-ddr4-5b7cecfa59294a90a8f7482eeb809d2d
+
+ups.glb
+  Título: UPS_EA89(60KVA)
+  Autor: hariom12345.hs (https://sketchfab.com/hariom12345.hs)
+  Licencia: CC BY 4.0 http://creativecommons.org/licenses/by/4.0/
+  Fuente: https://sketchfab.com/3d-models/ups-ea8960kva-ed2f41dda9f443fdaa274a976b9f18f6

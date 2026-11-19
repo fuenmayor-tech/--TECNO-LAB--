@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TECNO LAB · Laboratorio de Tecnología e Informática</title>
+<meta name="description" content="TECNO LAB: laboratorio interactivo de Tecnología e Informática para básica primaria (1.° a 5.°) con realidad aumentada, realidad virtual, modelos 3D, simulador, videos, tarjetas, quices, minijuegos y zona de creación. Aplicación elaborada por: Jeniffer Andrea Fuenmayor Díaz. Docente asesor: José Zapata.">
+<meta name="author" content="Jeniffer Andrea Fuenmayor Díaz">
+<meta name="theme-color" content="#081428">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237dd3fc'/%3E%3Cstop offset='1' stop-color='%23f9a8d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23081428'/%3E%3Cpath d='M18 20h28M32 20v26' stroke='url(%23g)' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='48' r='4' fill='%23fb7185'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<!--
+  TECNO LAB — Laboratorio interactivo de Tecnología e Informática (básica primaria, 1.° a 5.°)
+  Aplicación elaborada por: Jeniffer Andrea Fuenmayor Díaz · Docente asesor: José Zapata
+  Archivo único de la aplicación: estructura (HTML), presentación (CSS) y lógica (JS) integradas.
+  El código fuente organizado por módulos está en la carpeta src/ del repositorio.
+  Librerías locales en ./lib (con respaldo por CDN si no están): three.js (MIT), js-aruco2 (MIT),
+  MediaPipe Hands (Apache-2.0), iconos Lucide (ISC), fuentes Sora y Lexend (OFL).
+  Notas de implementación:
+  - Paleta: azul claro #7dd3fc, rosa #f9a8d4 / #f472b6, rojo #fb7185 / #f43f5e, café #c8a69a / #8a6656, sobre azul noche.
+    Sin verde ni naranja: los aciertos se marcan en azul claro con ✓ y los errores en rojo con ✕.
+  - La RA con marcador usa un marcador ArUco (diccionario ARUCO_MIP_36h12, id 42), el mismo para todas las partes.
+  - Los modelos .glb se buscan en ./models/<id>.glb y en ./models/modelos.json; solo se muestran modelos reales.
+-->
+<style>
+/*@@CSS@@*/
+</style>
+</head>
+<body data-grade="1">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Menú principal">
+    <button class="brand" id="brandBtn" type="button" aria-label="Ver la presentación de TECNO LAB">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--accent)"/><stop offset="1" stop-color="var(--accent-2)"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="16" fill="none" stroke="url(#bm)" stroke-width="3" opacity=".5"/><path d="M18 21h28M32 21v24" stroke="url(#bm)" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="48" r="4.5" fill="var(--red)"/></svg></span>
+      <span class="brand-text"><strong>TECNO LAB</strong><span>Tecnología e Informática</span></span>
+    </button>
+    <nav class="nav" id="nav"></nav>
+    <div class="sidebar-foot">
+      <button class="nav-item rail-more" id="btnMore" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Más opciones"></button>
+    </div>
+  </aside>
+  <div class="sidebar-scrim" id="scrim" hidden></div>
+  <div class="main-wrap">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="btnMenu" type="button" aria-label="Abrir menú" aria-controls="sidebar" aria-expanded="false"></button>
+      <div class="topbar-title"><span class="crumb" id="crumb">Inicio</span><span class="grade-name" id="gradeName"></span></div>
+      <button class="grade-pill" id="gradeBtn" type="button" aria-haspopup="dialog" aria-expanded="false"></button>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="credit"><span><b>TECNO LAB</b> · Aplicación elaborada por: <strong>Jeniffer Andrea Fuenmayor Díaz</strong></span><span>Docente asesor: <strong>José Zapata</strong></span><button type="button" class="btn btn-sm" id="creditIntro">Presentación</button><button type="button" class="btn btn-sm" id="creditList">Créditos</button></footer>
+  </div>
+  <nav class="bottombar" id="bottombar" aria-label="Accesos rápidos"></nav>
+</div>
+
+<!-- Escenario de Realidad Aumentada a pantalla completa -->
+<div class="ar-stage" id="arStage" hidden role="dialog" aria-modal="true" aria-label="Realidad aumentada">
+  <div class="ar-media" id="arMedia"><video id="arVideo" playsinline muted autoplay></video></div>
+  <div class="ar-label" id="arLabel" hidden></div>
+  <div class="ar-hud-top">
+    <button class="icon-btn ar-btn" id="arClose" type="button" aria-label="Salir de realidad aumentada"></button>
+    <div class="ar-status" id="arStatus" role="status" aria-live="polite">Iniciando cámara…</div>
+    <div class="row ar-top-r"><button class="icon-btn ar-btn" id="arMarkerBtn" type="button" aria-label="Ver o descargar el marcador"></button><button class="btn ar-btn ar-pill" id="arHand" type="button" aria-label="Controlar con gestos de la mano" aria-pressed="false"></button><button class="btn ar-btn ar-pill" id="arSwitch" type="button" aria-label="Cambiar de cámara"></button></div>
+  </div>
+  <div class="ar-quiz" id="arQuiz" hidden aria-live="polite"></div>
+  <div class="ar-guide" id="arGuide">
+    <div class="ar-guide-spot">
+      <div class="ar-guide-box" aria-hidden="true"><span>Marcador aquí</span></div>
+      <p id="arGuideText">Apunta al marcador TECNO LAB</p>
+      <button type="button" class="ar-side-btn" id="arSide">Cambiar de lado</button>
+    </div>
+    <div class="ar-hands-zone" aria-hidden="true"><span class="hz-e">🙌</span><b>Espacio para tus manos</b><small>Aquí la cámara ve tus gestos</small></div>
+  </div>
+  <div class="ar-hud-bottom">
+    <div class="ar-part">
+      <button class="icon-btn ar-btn" id="arPrev" type="button" aria-label="Parte anterior"></button>
+      <div class="ar-part-name"><strong id="arPartName">—</strong><span id="arPartType"></span></div>
+      <button class="icon-btn ar-btn" id="arNext" type="button" aria-label="Parte siguiente"></button>
+    </div>
+    <div class="ar-tools">
+      <button class="icon-btn ar-btn" id="arSmaller" type="button" aria-label="Hacer más pequeño"></button>
+      <button class="icon-btn ar-btn" id="arBigger" type="button" aria-label="Hacer más grande"></button>
+      <button class="icon-btn ar-btn" id="arSpin" type="button" aria-label="Girar automáticamente" aria-pressed="true"></button>
+      <button class="icon-btn ar-btn" id="arInfo" type="button" aria-label="Mostrar nombre sobre el modelo" aria-pressed="true"></button>
+      <button class="icon-btn ar-btn" id="arMirror" type="button" aria-label="Efecto espejo" aria-pressed="false"></button>
+      <button class="icon-btn ar-btn" id="arSpeak" type="button" aria-label="Escuchar descripción"></button>
+      <button class="icon-btn ar-btn ar-shot" id="arShot" type="button" aria-label="Tomar foto"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Capa para RA sin marcador (WebXR) -->
+<div class="xr-overlay" id="xrOverlay" hidden>
+  <div class="xr-msg" id="xrMsg">Mueve el celular despacio para encontrar el piso o la mesa. Toca la pantalla para colocar el modelo.</div>
+  <button class="btn btn-primary" id="xrExit" type="button">Salir</button>
+</div>
+
+<!-- Portada / presentación -->
+<div class="intro" id="intro" hidden role="dialog" aria-modal="true" aria-labelledby="introTitle"></div>
+<div class="popover" id="popover" hidden></div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<div id="modalRoot"></div>
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+<div class="sr-only" id="srAnnounce" aria-live="assertive"></div>
+
+<script>
+//@@JS@@
+</script>
+</body>
+</html>

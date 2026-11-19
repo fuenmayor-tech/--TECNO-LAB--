@@ -1,0 +1,69 @@
+TECNO LAB · Carpeta de modelos 3D
+=================================
+
+Aquí están los 25 modelos 3D que usa TECNO LAB (5 nuevos en cada grado).
+Todos vienen de Sketchfab y se optimizaron para la web. Sus créditos y licencias
+están en modelos.json y en LICENCIAS/CREDITOS-MODELOS-3D.txt.
+
+DÓNDE ESTÁN
+- models/js/<nombre>.js : cada modelo 3D (el archivo .glb guardado dentro de un .js).
+  Así cargan en GitHub Pages, en las apps y también al abrir index.html con doble
+  clic, sin servidor. Ninguno pasa de 2 MB.
+- models/modelos.json  : la lista de modelos con su parte, grado, autor y licencia.
+- Los .glb originales no vienen en el zip para que pese menos. Si los necesitas:
+  python3 src/construir.py --extraer-glb   (los vuelve a crear en esta carpeta)
+
+CÓMO AGREGAR UN MODELO
+1. Copia el archivo .glb en esta carpeta (models/) y agrega su entrada en
+   modelos.json:
+   - Para una parte de la lista base: usa su nombre exacto (por ejemplo
+     escaner.glb) y pon "parte".
+   - Para otra versión de una parte: usa "variante_de": "nombre_de_la_parte".
+   - Para un objeto nuevo (un carro, un robot…): pon "nombre", "tipo", "grado"
+     y "descripcion". Aparecerá en 3D, realidad aumentada y realidad virtual.
+2. En GitHub Pages el modelo aparece enseguida (también se puede subir el .glb
+   desde el navegador: Add file → Upload files, dentro de la carpeta models).
+3. Para que funcione también con doble clic y sin internet, ejecuta
+      python3 src/construir.py
+   que crea su archivo en models/js/ y actualiza index.html.
+4. Para cambiar un modelo que ya existe, reemplaza su .glb (o extráelos primero
+   con --extraer-glb) y ejecuta python3 src/construir.py.
+Desde la app también se puede: botón "Subir modelo" (queda guardado en ese
+navegador) y "Descargar para GitHub" (entrega el .glb con el nombre correcto).
+
+Nombres de la lista base:
+monitor  teclado  mouse  cpu  parlantes  audifonos  microfono  camara
+impresora  escaner  pantalla_tactil  usb  proyector  regulador  ups  router
+control  tarjeta_madre  procesador  ram  disco_duro  ssd  fuente
+tarjeta_grafica  ventilador
+
+Partes que todavía no tienen modelo: escaner, procesador.
+Consejo: usa modelos de menos de 2 MB para que la app abra rápido.
+
+MODELOS INCLUIDOS
+- monitor.glb: «Monitor | Computer | Realistic Computer Monitor» de Model Wala · CC BY 4.0 · https://sketchfab.com/3d-models/monitor-computer-realistic-computer-monitor-384ff6cf0bb947af9690529008f843a4
+- teclado.glb: «Teclado - Andres Mendez - (EST USB IM)» de rafaelblanco00 · CC BY 4.0 · https://sketchfab.com/3d-models/teclado-andres-mendez-est-usb-im-a9e5f1305024484a845b0978ff51c055
+- mouse.glb: «computer mouse» de mfk · CC BY 4.0 · https://sketchfab.com/3d-models/computer-mouse-f502604d3d9547088e9a56a3a32661ae
+- cpu.glb: «Mengenal CPU» de erwan99 · CC BY 4.0 · https://sketchfab.com/3d-models/mengenal-cpu-a872fc9e704248969064fe79dbf82917
+- microfono.glb: «Microphone Blue Yeti» de AlbertVictory · CC BY 4.0 · https://sketchfab.com/3d-models/microphone-blue-yeti-8d34f19a184747a0b4af76f7ea0ed572
+- camara.glb: «Logitech Webcam» de yimni · CC BY 4.0 · https://sketchfab.com/3d-models/logitech-webcam-ef31d877ff6e4aa4af565cddadf7a4c8
+- impresora.glb: «Epson printer model» de zafry · CC BY 4.0 · https://sketchfab.com/3d-models/epson-printer-model-752da10ef09a4f4782aa6c38a82f4b26
+- pantalla_tactil.glb: «Microsoft Surface Pro 3 + Touch Cover» de MD.Jobair Hossain · CC BY 4.0 · https://sketchfab.com/3d-models/microsoft-surface-pro-3-touch-cover-24052379ad2a4a57bd313aef83305dcf
+- usb.glb: «USB Flash Drive» de Artik · CC BY 4.0 · https://sketchfab.com/3d-models/usb-flash-drive-b7cfb7e2809e4c64afb713140c982489
+- proyector.glb: «Video projector» de 1-3D.com · CC BY-SA 4.0 · https://sketchfab.com/3d-models/video-projector-e14a2b9336df47a6b536a3a1cf829221
+- router.glb: «Router» de DailyArt · CC BY-NC 4.0 · https://sketchfab.com/3d-models/router-93c561886acc48bab5a34d02f0a463e5
+- control.glb: «Xbox Inalambric Controller (Black)» de oscar.lopez.riviello · Consultar en Sketchfab · https://sketchfab.com/oscar.lopez.riviello
+- tarjeta_madre.glb: «MotherBoard + Components» de Daniel Cardona · CC BY 4.0 · https://sketchfab.com/3d-models/motherboard-components-3bc94057328243d4b341a55f59160f8a
+- disco_duro.glb: «HDD» de Nadya Sarieva · CC BY 4.0 · https://sketchfab.com/3d-models/hdd-66abd679b8934298ba8af35db56d8106
+- ssd.glb: «SSD Drive» de Reitax · CC BY 4.0 · https://sketchfab.com/3d-models/ssd-drive-acc6b4073d7640508ea03ccbaf199c13
+- fuente.glb: «PSU Power Supply Unit» de dhafintaufiqi21 · CC BY 4.0 · https://sketchfab.com/3d-models/psu-power-supply-unit-69ccd1be3a77497cb2acc9e39e7c52b3
+- tarjeta_grafica.glb: «Tarjeta de video 2080» de WolfRayet · CC BY 4.0 · https://sketchfab.com/3d-models/tarjeta-de-video-2080-82c44e94cb774ddba910bb56fe92f982
+- ventilador.glb: «PC Fan Ventilador 140mm» de vldmr · CC BY-NC-SA 4.0 · https://sketchfab.com/3d-models/pc-fan-ventilador-140mm-d98c18f4018a49eaa08067745cad8257
+- parlantes.glb: «OOGOU A52 Speakers Black and White» de Vilad · CC BY 4.0 · https://sketchfab.com/3d-models/oogou-a52-speakers-black-and-white-c09ac57f5a5644adb81d1173dcf101e9
+- audifonos.glb: «Audio Technica Headphone» de ZxTulz · CC BY 4.0 · https://sketchfab.com/3d-models/audio-technica-headphone-d1e3aa0ba0b749d099cd7fef367d8077
+- parlante_logitech.glb: «Logitech Speaker» de Cem Gürbüz · CC BY-NC 4.0 · https://sketchfab.com/3d-models/logitech-speaker-fd53701e5e8d4586976a5abbc94f6b62
+- impresora_multifuncional.glb: «Imprimante» de boitaloran · CC BY 4.0 · https://sketchfab.com/3d-models/imprimante-74ec9fc76b5a46ddab64aa2342cff769
+- regulador.glb: «Automatic Voltage Regulator (AVR)» de seiippai · CC BY 4.0 · https://sketchfab.com/3d-models/automatic-voltage-regulator-avr-7c55a5cc83c64035983696ecd315f0fa
+- ram.glb: «Random access memory (ram) ddr4» de suuugar_mommy · CC BY-NC 4.0 · https://sketchfab.com/3d-models/random-access-memory-ram-ddr4-5b7cecfa59294a90a8f7482eeb809d2d
+- ups.glb: «UPS_EA89(60KVA)» de hariom12345.hs · CC BY 4.0 · https://sketchfab.com/3d-models/ups-ea8960kva-ed2f41dda9f443fdaa274a976b9f18f6
+

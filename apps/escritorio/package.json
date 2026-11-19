@@ -1,0 +1,8 @@
+{
+  "name": "tecnolab",
+  "productName": "TECNO LAB",
+  "version": "1.7.0",
+  "description": "TECNO LAB · Laboratorio interactivo de Tecnología e Informática (básica primaria). Aplicación elaborada por: Jeniffer Andrea Fuenmayor Díaz. Docente asesor: José Zapata.",
+  "author": "Jeniffer Andrea Fuenmayor Díaz",
+  "main": "main.js"
+}

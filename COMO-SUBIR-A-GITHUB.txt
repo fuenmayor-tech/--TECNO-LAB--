@@ -1,0 +1,84 @@
+TECNO LAB · Cómo subir el proyecto a GitHub y publicarlo
+=========================================================
+
+IMPORTANTE: NO SUBAS EL ARCHIVO .ZIP
+GitHub guarda el .zip como un solo archivo y no lo abre, así que la página no
+funcionaría. Además, desde el navegador GitHub no acepta archivos de más de 25 MB.
+Primero descomprime el zip y sube lo que hay adentro.
+
+LO QUE HAY EN LA CARPETA "tecnolab"
+- 94 archivos en total. Desde el navegador GitHub acepta hasta 100 de una vez.
+- El archivo más grande pesa unos 6 MB (el límite es 25 MB por archivo).
+- Los 25 modelos 3D están en models/js (un archivo por modelo, ninguno pasa de 2 MB).
+
+
+OPCIÓN A · DESDE EL NAVEGADOR (la más fácil)
+---------------------------------------------
+1. Descomprime TECNO-LAB.zip: clic derecho → "Extraer todo" (Windows) o doble
+   clic (Mac). Aparece la carpeta "tecnolab".
+2. Entra a github.com, toca "New" (repositorio nuevo), ponle un nombre (por
+   ejemplo: tecnolab), déjalo en "Public" y toca "Create repository".
+   No marques "Add a README": el proyecto ya trae uno.
+3. En el repositorio vacío toca el enlace "uploading an existing file"
+   (o, si ya tiene archivos: "Add file" → "Upload files").
+4. Abre la carpeta "tecnolab" en tu computador, selecciona TODO lo que hay
+   adentro (Ctrl + A en Windows, Cmd + A en Mac) y arrástralo a la página de GitHub.
+   Arrastra lo que hay DENTRO de "tecnolab", no la carpeta misma: el archivo
+   index.html debe quedar en la primera página del repositorio.
+5. Espera a que GitHub termine de cargar todos los archivos (la lista deja de
+   crecer) y toca "Commit changes".
+
+Si GitHub dice que son demasiados archivos o se queda cargando, súbelo en dos partes:
+   Parte 1: selecciona todo MENOS la carpeta "lib" → arrastrar → "Commit changes".
+   Parte 2: "Add file" → "Upload files" → arrastra la carpeta "lib" → "Commit changes".
+
+Usa Chrome o Edge en un computador: desde el celular no se pueden subir carpetas.
+
+
+OPCIÓN B · CON GITHUB DESKTOP (si el navegador no te deja)
+-----------------------------------------------------------
+GitHub Desktop es la aplicación gratuita de GitHub para Windows y Mac. Con ella
+no hay límite de 100 archivos ni de 25 MB por archivo.
+1. Descarga GitHub Desktop desde desktop.github.com e inicia sesión con tu cuenta.
+2. "File" → "Clone repository" → elige tu repositorio → "Clone".
+   Se crea una carpeta en tu computador (Documentos › GitHub › tecnolab).
+3. Copia en esa carpeta todo lo que hay dentro de la carpeta "tecnolab" del zip.
+4. En GitHub Desktop escribe un mensaje (por ejemplo: TECNO LAB 1.7), toca
+   "Commit to main" y luego "Push origin".
+
+
+PUBLICAR LA PÁGINA (GITHUB PAGES)
+---------------------------------
+1. En el repositorio: "Settings" → "Pages".
+2. En "Source" elige "Deploy from a branch". En "Branch" elige "main" y la
+   carpeta "/ (root)". Toca "Save".
+3. Espera uno o dos minutos y abre:  https://TU-USUARIO.github.io/tecnolab/
+   (cambia TU-USUARIO por tu usuario de GitHub y tecnolab por el nombre de tu repositorio).
+La cámara (realidad aumentada, gestos con la mano y zona de creación) funciona
+porque GitHub Pages usa https.
+
+
+ACTUALIZAR A UNA VERSIÓN NUEVA
+------------------------------
+Sube los archivos nuevos de la misma forma: los que tienen el mismo nombre se
+reemplazan. Si en el repositorio quedaron archivos .glb sueltos de una versión
+anterior dentro de "models", puedes borrarlos o dejarlos: la aplicación usa los
+de models/js. Después de actualizar, recarga la página (Ctrl + F5) para ver la
+versión nueva.
+
+
+ABRIR SIN INTERNET EN EL COMPUTADOR
+-----------------------------------
+También puedes abrir index.html con doble clic, siempre que esté junto a sus
+carpetas (models, lib y assets), es decir, con el zip descomprimido completo.
+Si copias solo el index.html, los modelos 3D no cargan.
+
+
+LAS APPS (Android, Windows, Mac)
+--------------------------------
+Las apps pesan más de 25 MB, por eso no van dentro del repositorio: se publican
+en la sección "Releases" del repositorio ("Create a new release"), que acepta
+archivos de hasta 2 GB cada uno.
+
+---
+Aplicación elaborada por: Jeniffer Andrea Fuenmayor Díaz · Docente asesor: José Zapata
